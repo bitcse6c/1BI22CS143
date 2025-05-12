@@ -7,15 +7,15 @@ pipeline {
     }
 
     environment {
-        // Define the path to the JAR file
-        JAR_PATH = 'target/my-maven-app3-1.0-SNAPSHOT.jar'
+       
+        JAR_PATH = 'target/sourcetodest-1.0-SNAPSHOT.jar'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                // Clone your Git repository
-                git url: 'https://github.com/Vinayak-Rajput/Maven-Src-to-Dest'
+                
+                git url: 'https://github.com/saniya-gs/SOURCE-TO-DEST'
 
             }
         }
@@ -29,7 +29,7 @@ pipeline {
 
         stage('Run Application') {
             steps {
-                // Run the JAR file using the 'java -jar' command
+               
                 sh 'mvn exec:java -Dexec.mainClass="com.example.App"'
             }
         }
