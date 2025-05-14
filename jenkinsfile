@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven'  // Ensure Maven is available in Jenkins
-        jdk 'JDK'         // Ensure JDK 11 is available in Jenkins
+        maven 'Maven'  
+        jdk 'JDK'         
     }
 
     environment {
@@ -22,7 +22,7 @@ pipeline {
 
         stage('Build JAR') {
             steps {
-                // Use Maven to clean and package the project, creating a JAR file
+                
                 sh 'mvn clean package'
             }
         }
